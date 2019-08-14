@@ -1,17 +1,30 @@
 <div class="container">
   <h1>All our flats (<%= @flats.length %>)</h1>
-  <ul>
-    <% @flats.each do |flat| %>
-    <li class="card">
-      <h3><%= flat.name %></h3>
-      <p>flat.address</p>
-      <p>👨‍👩‍👧‍👦: <%= flat.number_of_guests %></p>
-      <p>💶: <%= flat.price_per_night %></p>
-      <% end %>
+
+  <div class="flats">
+    <ul>
+      <% @flats.each do |flat| %>
+      <li class="card-p" style="width: 18rem;">
+        <div class="text-flat">
+          <h3 class="card-title"><%= flat.name %></h3>
+          <p class="card-text"><%=  flat.address %></p>
+          <p>👨‍👩‍👧‍👦: <%= flat.number_of_guests %></p>
+          <p>💶: <%= flat.price_per_night %></p>
+        </div>
+
+        <div class="nums">
+          <div class="more"> <p> <%= link_to "More Info",  flat_path(flat) %> </p> </div>
+          <div class="edit"> <p><%= link_to "Edit",  edit_flat_path(flat)%></p></div>
+          <div class="delete">
+          <p><%= link_to "Delete",  flat_path(flat), method: :delete %></div></p>
+        </div>
+
+        <% end %>
 
 
-    </li>
+      </li>
 
-  </ul>
+    </ul>
+  </div>
 
 </div>

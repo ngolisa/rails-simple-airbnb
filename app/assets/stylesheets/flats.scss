@@ -1,3 +1,44 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.flats {
+  display: flex;
+}
+
+.card-p{
+  margin: 20px;
+  padding: 10px;
+}
+
+.text-flat{
+  background-color: #DEDEDE;
+  border: solid 1px black;
+  padding: 10px;
+}
+
+.nums{
+  border: solid 1px black;
+  height: 50px;
+  padding: 10px;
+}
+
+.nums{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.more p{
+  color:blue
+}
+
+.edit p{
+  color:yellow;
+}
+.delete p{
+  color:orange;
+}
+
+ul{
+  list-style-type: none;
+}
